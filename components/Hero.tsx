@@ -45,7 +45,9 @@ export default function Hero() {
               icon={<FaLocationArrow />}
               position="right"
               otherClasses=""
-            //   handleClick={() => {}}
+              handleClick={() => {
+                console.log("show my work");
+              }}
             />
           </a>
         </div>
