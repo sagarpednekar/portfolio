@@ -4,7 +4,7 @@ interface IMagicButtonProps {
   title: string;
   icon: ReactNode;
   position: string;
-  handleClick: () => void;
+  handleClick?: () => void;
   otherClasses?: string;
 }
 
