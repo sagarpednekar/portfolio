@@ -1,8 +1,8 @@
-"use client";
 import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "./ui/MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import MagicButton from "@/components/ui/MagicButton";
+import { Spotlight } from "@/components/ui/Spotlight";
+import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
+import { profileImage } from "@/data";
 
 export default function Hero() {
   return (
@@ -20,37 +20,38 @@ export default function Hero() {
       </div>
 
       <div>
-        <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.3] flex items-center justify-center absolute top-0 left-0">
-          {/* Radial gradient for the container to give a faded look */}
+        <div className="h-[50rem] w-full dark:bg-black bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.3] flex items-center justify-center absolute top-0 left-0">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>
       </div>
 
-      <div className="flex justify-center relative z-10 my-20">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Full Stack Developer
-          </h2>
-
+      <div className="flex md:flex-row flex-col-reverse md:text-left text-center items-center relative z-10 mt-10 md:mt-20 mb-10 md:mb-20">
+        <div className="w-full md:w-[50vw] p-5 md:p-10">
+          <p className="font-bold text-3xl md:text-5xl">I am Sagar</p>
           <TextGenerateEffect
-            className="text-center text-5xl md:text-5xl lg:text-6xl"
-            words="Transforming designs into live Applications"
+            className="text-xl md:text-3xl"
+            words="Full Stack Developer from 🇮🇳"
           />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi I&apos;m Sagar, a Full Stack Developer based in India.          </p>
-
+          <p className="text-lg md:text-2xl mb-2 md:mb-0">
+            I transform abstract ideas into robust, scalable full-stack
+            solutions, using cutting-edge technologies to create seamless user
+            experiences and fuel business growth
+          </p>
           <a href="#about">
             <MagicButton
               title="Show My Work"
               icon={<FaLocationArrow />}
               position="right"
               otherClasses=""
-              handleClick={() => {
-                console.log("show my work");
-              }}
             />
           </a>
+        </div>
+        <div className="w-full md:w-[50vw] flex justify-center mt-5 md:mt-0">
+          <img
+            src={profileImage}
+            alt="profile"
+            className="w-48 h-48 md:w-72 md:h-72 rounded-full object-cover object-center"
+          />
         </div>
       </div>
     </div>

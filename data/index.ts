@@ -205,13 +205,18 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      url: "https://github.com/sagarpednekar"
     },
     {
       id: 2,
       img: "/twit.svg",
+        url: "https://twitter.com/sagarpednekar04"
     },
     {
       id: 3,
       img: "/link.svg",
+      url:"https://www.linkedin.com/in/sagarvpednekar/"
     },
   ];
+
+  export const profileImage = "/profile3.png";
