@@ -1,3 +1,4 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -37,8 +38,7 @@ export default function Hero() {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi I'm Sagar, a Full Stack Developer based in India.
-          </p>
+            Hi I&apos;m Sagar, a Full Stack Developer based in India.          </p>
 
           <a href="#about">
             <MagicButton
@@ -46,7 +46,9 @@ export default function Hero() {
               icon={<FaLocationArrow />}
               position="right"
               otherClasses=""
-            //   handleClick={() => {}}
+              handleClick={() => {
+                console.log("show my work");
+              }}
             />
           </a>
         </div>
