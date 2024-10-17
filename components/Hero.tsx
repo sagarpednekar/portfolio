@@ -3,6 +3,7 @@ import MagicButton from "@/components/ui/MagicButton";
 import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import { profileImage } from "@/data";
+import { BackgroundGradient } from "@/components/ui/BackgroundGradient";
 
 export default function Hero() {
   return (
@@ -47,12 +48,16 @@ export default function Hero() {
           </a>
         </div>
         <div className="w-full md:w-[50vw] flex justify-center mt-5 md:mt-0">
+        <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+
           <img
             src={profileImage}
             alt="profile"
             className="w-48 h-48 md:w-72 md:h-72 rounded-full object-cover object-center"
           />
+            </BackgroundGradient>
         </div>
+
       </div>
     </div>
   );
