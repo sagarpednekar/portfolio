@@ -22,17 +22,18 @@ export function Button({
 }: {
   borderRadius?: string;
   children: React.ReactNode;
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   as?: any;
   containerClassName?: string;
   borderClassName?: string;
   duration?: number;
   className?: string;
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   [key: string]: any;
 }) {
   return (
     <Component
       className={cn(
-        // remove h-16 w-40, add  md:col-span-2
         "bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1",
         containerClassName
       )}
@@ -81,8 +82,10 @@ export const MovingBorder = ({
   duration?: number;
   rx?: string;
   ry?: string;
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   [key: string]: any;
 }) => {
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   const pathRef = useRef<any>();
   const progress = useMotionValue<number>(0);
 
